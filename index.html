@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title> kot </title>
+		<link rel="stylesheet" href="css/main.css" />
+		<script>
+			window.onload = function () {
+				document.querySelector('#baseball-bat').addEventListener("webkitAnimationEnd", function () {
+					//document.querySelector('#clock').remove();
+					document.querySelector('#baseball-bat').remove();
+				},false);
+				document.querySelector('#frenzy').addEventListener("webkitAnimationEnd", function () {
+					document.querySelectorAll('body')[0].style.backgroundImage = 'url(images/apocal.jpg)';
+					document.querySelector('#animation').remove();
+					document.querySelector('#frenzy').remove();
+					document.querySelector('#frenzy-shadow').remove();
+					document.querySelector('#baseball-bat').remove();
+				},false);
+			};
+		</script>
+	</head>
+	<body>
+		<div id="animation">
+			<div class="roller1"> </div>
+			<div class="roller2"> </div>
+			<div class="roller3"> </div>
+			<div class="roller4"> </div>
+		</div>
+		<div id="clock">
+			<div id="hours"> </div>
+			<div id="minutes"> </div>
+		</div>
+		<div id="frenzy-shadow">
+			<div class="whirl"> </div>
+		</div>
+		<div id="frenzy">
+			<div class="whirl"> </div>
+		</div>
+		<div id="baseball-bat"> </div>
+	</body>
+</html>

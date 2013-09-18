@@ -1,0 +1,569 @@
+/****************************************************************
+	
+
+	CSS on ArteCSS
+	Title: efigence
+
+*****************************************************************
+
+
+	1. BASE
+		1.1 Reset
+
+	2. COMMON
+
+		
+****************************************************************
+
+*/
+/* 1. BASE
+----------------------------------------------------------------
+================================================================
+
+
+** 1.1 Reset
+----------------------------------------------------------------
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 100%;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+ins,
+del,
+a {
+  text-decoration: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/*
+
+
+** 2. COMMON
+----------------------------------------------------------------
+================================================================
+
+
+*/
+html {
+    background-image: url(../images/time-zones.jpg), url(../images/apocal.jpg);
+    background-size: cover;
+    height: 100%;
+}
+
+body {
+    background: url(../images/time-zones.jpg) no-repeat center center #000000;
+    background-size: cover;
+    display: block;
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+    transition: background-image 0.5s ease;
+}
+
+@-webkit-keyframes art-rotator {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes art-back-rotator {
+    from {
+        -webkit-transform: rotate(360deg);
+    }
+    to {
+        -webkit-transform: rotate(-360deg);
+    }
+}
+
+#animation {
+    height: 500px;
+    left: 50%;
+    margin: -250px 0 0 -250px;
+    position: fixed;
+    top: 50%;
+    width: 500px;
+}
+#animation .roller1,
+#animation .roller2,
+#animation .roller3,
+#animation .roller4 {
+    opacity: 0.6;
+}
+#animation .roller1 {
+    border-radius: 100%;
+    border-width: 35px;
+    border-style: dotted;
+    border-color: #da1;
+    height: 100px;
+    left: 210px;
+    margin: -85px 0 0 -85px;
+    position: absolute;
+    top: 160px;
+    width: 100px;
+    -webkit-animation: art-rotator 1s infinite linear;
+}
+.modern #animation .roller1 {
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+    background-clip: padding-box;
+}
+#animation .roller2 {
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+    border-radius: 100%;
+    border-width: 15px;
+    border-style: dotted;
+    border-color: #ad1;
+    height: 50px;
+    left: 360px;
+    margin: -65px 0 0 -65px;
+    position: absolute;
+    top: 190px;
+    width: 50px;
+    -webkit-animation: art-back-rotator 1s infinite linear;
+}
+.modern #animation .roller2 {
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+#animation .roller3 {
+    border-radius: 100%;
+    border-width: 35px;
+    border-style: dashed;
+    border-color: #1ad;
+    height: 100px;
+    left: 340px;
+    margin: -85px 0 0 -85px;
+    position: absolute;
+    top: 260px;
+    width: 100px;
+    -webkit-animation: art-rotator 1s infinite ease-in;
+}
+.modern #animation .roller3 {
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+    background-clip: padding-box;
+}
+#animation .roller4 {
+    border-radius: 100%;
+    border-width: 35px;
+    border-style: dashed;
+    border-color: #1da;
+    height: 100px;
+    left: 340px;
+    margin: -85px 0 0 -85px;
+    position: absolute;
+    top: 260px;
+    width: 100px;
+    -webkit-animation: art-back-rotator 1s infinite ease;
+}
+.modern #animation .roller4 {
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+#clock {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 100%;
+  height: 500px;
+  left: 50%;
+  margin: -250px 0 0 -250px;
+  position: fixed;
+  top: 50%;
+  width: 500px;
+}
+.modern #clock {
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+#clock #hours {
+  border-top: 170px solid #da1;
+  border-radius: 100%;
+  height: 130px;
+  left: 50%;
+  margin: -150px 0 0 -5px;
+  position: absolute;
+  top: 50%;
+  width: 10px;
+  -webkit-animation: art-rotator 2s infinite linear;
+}
+.modern #clock #hours {
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+#clock #minutes {
+  border-top: 270px solid #ad1;
+  border-radius: 100%;
+  height: 230px;
+  left: 50%;
+  margin: -250px 0 0 -5px;
+  position: absolute;
+  top: 50%;
+  width: 10px;
+  -webkit-animation: art-rotator 20s infinite linear;
+}
+.modern #clock #minutes {
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+
+@-webkit-keyframes frenzy {
+  0% {
+    left: -20%;
+    top: -10%;
+    -webkit-transform: rotate(-224deg) scale(2);
+  }
+  7% {
+    left: 45%;
+    top: 10%;
+    -webkit-transform: rotate(-54deg) scale(1.5);
+  }
+  15% {
+    left: 95%;
+    top: 30%;
+    -webkit-transform: rotate(-26deg);
+  }
+  26% {
+    left: 25%;
+    top: 60%;
+    -webkit-transform: rotate(-120deg) scale(0.6);
+  }
+  30% {
+    left: 5%;
+    top: 99%;
+    -webkit-transform: rotate(0deg) scale(0.4);
+  }
+  40% {
+    left: 5%;
+    top: 10%;
+    -webkit-transform: rotate(36deg) scale(0.6);
+  }
+  60% {
+    left: 5%;
+    top: 10%;
+    -webkit-transform: rotate(266deg) scale(0.6);
+  }
+  70% {
+    left: 15%;
+    top: 85%;
+    -webkit-transform: rotate(306deg);
+  }
+  75% {
+    left: 95%;
+    top: 80%;
+    -webkit-transform: rotate(-226deg);
+  }
+  100% {
+    left: 50%;
+    top: 150%;
+    -webkit-transform: rotate(36deg);
+  }
+}
+
+@-webkit-keyframes frenzy-shade {
+  0% {
+    left: -20%;
+    top: -10%;
+    -webkit-transform: rotate(-224deg) scale(0.3);
+    margin: 110px 0 0 200px;
+  }
+  7% {
+    left: 45%;
+    top: 10%;
+    -webkit-transform: rotate(-54deg) scale(0.4);
+    margin: 100px 0 0 -50px;
+  }
+  15% {
+    left: 95%;
+    top: 30%;
+    -webkit-transform: rotate(-26deg) scale(0.5);
+    margin: 40px 0 0 -300px;
+  }
+  26% {
+    left: 25%;
+    top: 60%;
+    -webkit-transform: rotate(-120deg) scale(0.6);
+    margin: -20px 0 0 140px;
+  }
+  30% {
+    left: 5%;
+    top: 99%;
+    -webkit-transform: rotate(0deg) scale(0.8);
+    margin: -200px 0 0 200px;
+  }
+  40% {
+    left: 5%;
+    top: 10%;
+    -webkit-transform: rotate(36deg) scale(0.6);
+    margin: 200px 0 0 200px;
+  }
+  60% {
+    left: 5%;
+    top: 10%;
+    -webkit-transform: rotate(266deg) scale(0.6);
+    margin: 200px 0 0 200px;
+  }
+  70% {
+    left: 15%;
+    top: 85%;
+    -webkit-transform: rotate(306deg) scale(0.4);
+    margin: -180px 0 0 180px;
+  }
+  75% {
+    left: 95%;
+    top: 80%;
+    -webkit-transform: rotate(-226deg) scale(0.4);
+    margin: -170px 0 0 -300px;
+  }
+  100% {
+    left: 50%;
+    top: 150%;
+    -webkit-transform: rotate(36deg) scale(0.4);
+    margin: -220px 0 0 -250px;
+  }
+}
+
+#frenzy-shadow,
+#frenzy {
+  border-radius: 90% 100% 100% 90%;
+  background-color: #617e0a;
+  border: 8px dotted #ad1;
+  border-left: 30px solid #da1;
+  height: 60px;
+  margin: -30px 0 0 -100px;
+  position: fixed;
+  left: -20%;
+  top: -10%;
+  width: 200px;
+  -webkit-animation: frenzy 20s 1s 1 linear;
+}
+.modern #frenzy-shadow,
+.modern #frenzy {
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+
+#frenzy-shadow .whirl,
+#frenzy .whirl {
+  border-radius: 100%;
+  border-color: #a1d transparent;
+  border-style: solid;
+  border-width: 100px;
+  height: 20px;
+  left: 0;
+  margin: -60px 0 0 -60px;
+  opacity: 0.5;
+  position: absolute;
+  top: -16px;
+  width: 20px;
+  -webkit-animation: art-back-rotator 0.2s infinite linear;
+}
+.modern #frenzy-shadow .whirl,
+.modern #frenzy .whirl {
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+#frenzy-shadow {
+  -webkit-animation: frenzy-shade 20s 1s 1 linear;
+  width: 100px;
+  height: 30px;
+  margin: 210px 0 0 -50px;
+}
+#frenzy-shadow,
+#frenzy-shadow .whirl {
+  background-color: rgba(200, 200, 200, 0.3);
+  border-color: rgba(200, 200, 200, 0.3);
+}
+#frenzy-shadow .whirl {
+  border-width: 50px;
+  top: 16px;
+}
+
+@-webkit-keyframes jebnij {
+  0% {
+    opacity: .2;
+  }
+  3% {
+    -webkit-transform: rotate(90deg) translate(318px, -216px);
+    opacity: 1;
+  }
+  97% {
+    -webkit-transform: rotate(0deg) translate(0px, 0px);
+    opacity: 1;
+  }
+  100% {
+    opacity: .2;
+  }
+}
+
+#baseball-bat {
+  -webkit-animation: jebnij .2s 15s 1 linear;
+  background-color: #fff;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 10px 0 100px 0;
+  border-radius: 60% 60% 100% 100%;
+  bottom: 150px;
+  height: 200px;
+  left: 100px;
+  opacity: 0;
+  position: fixed;
+  width: 30px;
+}
+.modern #baseball-bat {
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+#baseball-bat:before {
+  color: #fff;
+  content: ".";
+  background-color: #fff;
+  height: 200px;
+  left: 9px;
+  position: absolute;
+  bottom: -180px;
+  width: 12px;
+}
+#baseball-bat:after {
+  border-radius: 100%;
+  color: #000;
+  content: ".  ";
+  background-color: #fff;
+  height: 10px;
+  left: 0;
+  position: absolute;
+  bottom: -180px;
+  width: 30px;
+}
+.modern #baseball-bat:after {
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
